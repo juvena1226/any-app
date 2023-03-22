@@ -1,0 +1,51 @@
+<div class="container-fluid title">
+  <h3>LGTM Channel</h3>
+</div>
+<div class="py-2 pl-3">
+  <button
+    type="button"
+    class="btn btn-primary send-btn"
+    (click)="scroll.scrollTop = 0"
+  >
+    Read More
+  </button>
+</div>
+<div class="container message-list" #scroll>
+  <div class="messages" *ngFor="let item of messages">
+    <div class="col-6">
+      <div class="row chat-bubble-container">
+        <div class="profile-picture">
+          <img [src]="'{{ item.user.avatarUrl }}'" />
+        </div>
+        <div class="sender-name">
+          {{ item.user.name }}
+        </div>
+      </div>
+      <div class="sender-text chat-bubble">
+        {{ item.text }}
+      </div>
+      <div class="time-sent">
+        {{ item.sent }}
+      </div>
+    </div>
+  </div>
+  <div class="sender-container">
+    <div class="chat-bubble-sender">{{ this.reply }}</div>
+  </div>
+</div>
+<form class="text-box">
+  <div class="py-2 pl-3">
+    <input #text class="message-input" type="text" id="name" name="message" />
+  </div>
+
+  <div class="py-2 mx-3">
+    <button
+      type="button"
+      class="btn btn-primary send-btn"
+      [ngClass]="{ sender: getValue }"
+      (click)="getValue(text.value)"
+    >
+      Send
+    </button>
+  </div>
+</form>

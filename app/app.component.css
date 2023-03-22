@@ -1,0 +1,50 @@
+
+
+
+
+.chat-app{
+  width: 100%;
+  padding-left: 16px;
+  }
+
+  .side-panel{
+    width: 200px;
+  height: 80vh;
+    background-color: #f4f5fa!important;
+    border-right: gray 1px solid;
+  }
+  .side-panel-item{
+    padding: 16px 0 16px 0!important;
+
+  }
+  .chat-window{
+    width: 350px;
+    height: 80vh;
+    padding: 16px 16px 0 0;
+    background-color: #f4f5fa;
+  }
+  .select-box{
+    background-color: #ffff;
+   padding-left: 16px;
+    box-sizing: border-box!important;
+    width: 350px!important;
+    height: 30px;
+    border: grey 1px solid;
+
+  }
+
+  .nav-list {
+  font-weight:500;
+  }
+
+    .nav-list-item{
+      font-size: 14px;
+      width: 100%;
+      padding: 16px 0 16px 16px!important;
+    }
+    .nav-list-item:hover{
+    background-color: white;
+    }
+    .options{
+      padding: 16px 0 0 16px;
+    }
